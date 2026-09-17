@@ -20,4 +20,3 @@ WITH BIKE AS (
 
 SELECT *
 FROM bike
-LIMIT 10
