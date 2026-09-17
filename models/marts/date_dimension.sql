@@ -11,7 +11,7 @@ with
             end as "DAY_TYPE",
             {{ fn_Season("STARTED_AT") }} as "Season",
             {{ function1("STARTED_AT") }} as "PastOrFuture"
-        from {{ source("demo", "bike") }}
+        from {{ ref('stg_bike') }}
         where started_at != 'started_at'
         order by date(to_timestamp(started_at))
     )
